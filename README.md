@@ -17,9 +17,22 @@ That is the public repository for the rule set that we are using with this recip
 
 ## Install this base package
 
+```
+git clone git@github.com:rietta/apache-modsecurity-for-rails.git
+```
+
 
 ## Copy the rulesets into place
 
+```
 cp owasp-modsecurity-crs/modsecurity_crs_10_setup.conf.example  002_crs_10_setup.conf
 cp modsecurity.conf-recommended modsecurity.conf
+```
+
 Edit that as you like
+
+## In the Apache configuration, for Ruby on Rails applications:
+
+```
+ln -s apache-modsecurity-for-rails/apache/rails_site.conf 003_rails_site.conf
+```
